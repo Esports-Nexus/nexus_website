@@ -1,0 +1,284 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #111010 !important; /* Ensure background is set */
+    color: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    min-height: 100vh; /* Ensure body stretches to full height */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar .logo h1 {
+    color: #fff;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: #3498db;
+}
+
+.navbar .hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(18, 17, 17, 0.9);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        z-index: 10;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+
+    .navbar .hamburger {
+        display: block;
+    }
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 100vh;
+    background-color: #7a217a; /* Ensure fallback background */
+    background-image: url('https://images.unsplash.com/photo-1689443111130-6e9c7dfd8f9e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z2FtaW5nJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111010; /* Ensure background color is always visible */
+    z-index: -1; /* Keep it behind text and other content */
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    animation: fadeInUp 2s ease-out;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    animation: fadeInUp 2s ease-out 0.5s;
+}
+
+.cta-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #2980b9;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Section Styles */
+.about {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    animation: fadeInUp 2s ease-out 1s;
+}
+
+.about-container h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-container p {
+    font-size: 20px;
+    color: #555;
+}
+
+/* Portfolio Section Styles */
+.portfolio {
+    background-color: #333;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.portfolio-container h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.stat-card {
+    background-color: #444;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 200px;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.stat-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Market Trends Section Styles */
+.trends {
+    background-image: url('');
+    background-size:auto;
+    padding: 80px 20px;
+    background-color: #ecf0f1;
+    text-align: center;
+    animation: fadeInUp 2s ease-out 1.5s;
+}
+
+.trends-container h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.trend-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.trend-card {
+    background-color: #3498db;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 250px;
+    color: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.trend-card:hover {
+    transform: translateY(-10px);
+}
+
+.trend-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.trend-card p {
+    font-size: 18px;
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+}
